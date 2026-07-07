@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday Sathi ❤️</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<style>
+body{
+margin:0;
+height:100vh;
+background:linear-gradient(45deg,#ff758c,#ff7eb3);
+font-family:sans-serif;
+color:white;
+text-align:center;
+overflow:hidden;
+}
+
+.box{
+margin-top:40px;
+}
+
+h1{
+font-size:40px;
+animation:glow 2s infinite;
+}
+
+@keyframes glow{
+50%{text-shadow:0 0 25px white;}
+}
+
+img{
+width:200px;
+height:200px;
+border-radius:50%;
+border:4px solid white;
+object-fit:cover;
+}
+
+.cake{
+font-size:90px;
+animation:up 1s infinite alternate;
+}
+
+@keyframes up{
+to{transform:translateY(-15px);}
+}
+
+button{
+padding:12px 30px;
+border:0;
+border-radius:30px;
+background:#ff4081;
+color:white;
+font-size:18px;
+}
+
+#msg{
+display:none;
+font-size:20px;
+margin:20px;
+}
+
+.heart{
+position:absolute;
+animation:fall 4s linear infinite;
+}
+
+@keyframes fall{
+to{transform:translateY(700px);}
+}
+</style>
+</head>
+
+<body>
+
+<audio autoplay loop>
+<source src="Song.mp3">
+</audio>
+
+<div class="box">
+
+<h1>🎉 Happy Birthday Sathi ❤️</h1>
+
+<img src="KO.jpg">
+
+<div class="cake">🎂</div>
+
+<h2>🕯️ Make A Wish 🕯️</h2>
+
+<button onclick="wish()">Cut Cake 🎂</button>
+
+<div id="msg">
+💖 Happy Birthday My Dear Sathi 💖<br>
+May your day be filled with happiness & smiles 😊<br>
+Love you always ❤️🎁
+</div>
+
+</div>
+
+
+<script>
+function wish(){
+document.getElementById("msg").style.display="block";
+}
+
+setInterval(()=>{
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"%";
+h.style.top="-20px";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),4000);
+},300);
+</script>
+
+</body>
+</html>
+  Birthday/
+│
+├── index.html
+├── Song.mp3
+└── KO.jpg
